@@ -18,7 +18,7 @@ npm install murge --save
 ```
 
 ```js
-var murge = require('murge'), original, cloned;
+var murge = require('murge');
 
 // merge an object (modifies the first object)
 console.log(murge({one:'hello'}, {two: 'world'}));
@@ -29,8 +29,8 @@ console.log(murge(null, {one:'hello'}, {two: 'world'}));
 // -> {"one": "hello", "two": "world"}
 
 // deep clone an object
-original = { x: { y: 1 } };
-cloned = murge(true, original);
+var original = { x: { y: 1 } };
+var cloned = murge(true, original);
 cloned.x.y++;
 console.log(original.x.y, cloned.x.y);
 // -> 1, 2
