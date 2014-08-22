@@ -1,0 +1,25 @@
+{
+  "name": "murge",
+  "version": "0.0.1",
+  "author": "Greg Reimer <gregreimer@gmail.com> (https://github.com/greim)",
+  "contributors": ["yeikos (http://www.yeikos.com)"],
+  "description": "Merge multiple objects into one, optionally creating a new cloned object.",
+  "main": "murge.js",
+  "license": "MIT",
+  "homepage": "https://github.com/greim/murge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greim/murge.git"
+  },
+  "keywords": [
+    "merge",
+    "extend",
+    "clone",
+    "object",
+    "deep",
+    "browser"
+  ],
+  "scripts": {
+    "test": "cd tests; node index.js"
+  }
+}
