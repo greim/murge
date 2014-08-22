@@ -1,12 +1,12 @@
 # Murge
 
 Merge multiple objects into one, optionally creating a new cloned object.
-Similar to jQuery.extend or _.extend but more flexible. Works in Node.js
+Similar to `_.extend` or `jQuery.extend` but more flexible. Works in Node.js
 and the browser.
 
-Credit goes to https://github.com/yeikos for creating this module.
+Credit goes to https://github.com/yeikos/js.merge for creating this module.
 This one contains changes that would likely break the massive number
-of dependencies on yeikos's, namely that this one only copies *owned*
+of dependencies (~20k) on yeikos's, namely that this one only merges *owned*
 properties, ignoring prototype properties.
 
 Original npm `merge` module: https://www.npmjs.org/package/merge
@@ -46,19 +46,9 @@ console.log(merged);
 ## Browser Usage
 
 ```html
-<script src="murge.js"></script>
+<script src="path/to/murge.js"></script>
 <script>
-	var original, cloned;
-
-	console.log(murge({one:'hello'}, {two: 'world'}));
-	// -> {"one": "hello", "two": "world"}
-
-	original = { x: { y: 1 } };
-	cloned = murge(true, original);
-	cloned.x.y++;
-
-	console.log(original.x.y, cloned.x.y);
-	// -> 1, 2
+  window.merge(ob1, ob2);
 </script>
 ```
 
