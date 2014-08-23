@@ -6,7 +6,7 @@ and the browser.
 
 Credit goes to [yeikos](https://github.com/yeikos) for creating this module
 ([github](https://github.com/yeikos/js.merge), [npm](https://www.npmjs.org/package/merge)).
-This one contains a few changes to better suit my own purposes:
+This one contains a few changes I felt were necessary:
 
  1. It only merges own properties, ignoring ones from the prototype chain. This would likely break some of the ~24k dependencies on the other version and is the main reason for this fork.
  2. It contains [perf improvements](http://jsperf.com/merge-test) which have also been [submitted](https://github.com/yeikos/js.merge/pull/11) to the original module as a pull request, but not yet accepted as of this writing.
