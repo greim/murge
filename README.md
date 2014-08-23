@@ -1,5 +1,6 @@
 # Murge
 
+A fork of [merge](https://www.npmjs.org/package/merge).
 Merge multiple objects into one, optionally creating a new cloned object.
 Similar to `_.extend` or `jQuery.extend` but more flexible. Works in Node.js
 and the browser.

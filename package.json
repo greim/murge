@@ -1,6 +1,6 @@
 {
   "name": "murge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Greg Reimer <gregreimer@gmail.com> (https://github.com/greim)",
   "contributors": ["yeikos (http://www.yeikos.com)"],
   "description": "Merge multiple objects into one, optionally creating a new cloned object.",
