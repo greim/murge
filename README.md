@@ -18,7 +18,7 @@ to the original module as a pull request.
 ## Node.js Usage
 
 ```sh
-npm install murge --save
+$ npm install murge
 ```
 
 ```js
@@ -59,5 +59,5 @@ console.log(merged);
 ## Tests
 
 ```sh
-npm test
+$ npm test
 ```
