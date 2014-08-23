@@ -17,7 +17,9 @@
     "clone",
     "object",
     "deep",
-    "browser"
+    "browser",
+    "amd",
+    "requirejs"
   ],
   "scripts": {
     "test": "cd tests; node index.js"
