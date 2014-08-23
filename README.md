@@ -4,15 +4,16 @@ Merge multiple objects into one, optionally creating a new cloned object.
 Similar to `_.extend` or `jQuery.extend` but more flexible. Works in Node.js
 and the browser.
 
-Credit goes to https://github.com/yeikos/js.merge for creating this module.
+Credit goes to [yeikos](https://github.com/yeikos) for creating this module
+([github](https://github.com/yeikos/js.merge), [npm](https://www.npmjs.org/package/murge)).
 This one contains changes that would likely break the massive number
 of dependencies (~20k) on yeikos's, namely that this one only merges *owned*
 properties, ignoring prototype properties.
 
-There are also some performance improvements (http://jsperf.com/merge-test)
-which have been [submitted](https://github.com/yeikos/js.merge/pull/11) to the original module as well.
 
-Original npm `merge` module: https://www.npmjs.org/package/merge
+There are also a few performance improvements (http://jsperf.com/merge-test)
+which have also been [submitted](https://github.com/yeikos/js.merge/pull/11)
+to the original module as a pull request.
 
 ## Node.js Usage
 
