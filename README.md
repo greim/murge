@@ -6,14 +6,11 @@ and the browser.
 
 Credit goes to [yeikos](https://github.com/yeikos) for creating this module
 ([github](https://github.com/yeikos/js.merge), [npm](https://www.npmjs.org/package/merge)).
-This one contains changes that would likely break the massive number
-of dependencies (~20k) on yeikos's, namely that this one only merges *owned*
-properties, ignoring prototype properties.
+This one contains a few changes to better suit my own purposes:
 
-
-There are also a few performance improvements (http://jsperf.com/merge-test)
-which have also been [submitted](https://github.com/yeikos/js.merge/pull/11)
-to the original module as a pull request.
+ 1. It only merges own properties, ignoring ones from the prototype chain. This would likely break some of the ~24k dependencies on the other version and is the main reason for this fork.
+ 2. It contains [perf improvements](http://jsperf.com/merge-test) which have also been [submitted](https://github.com/yeikos/js.merge/pull/11) to the original module as a pull request, but not yet accepted as of this writing.
+ 3. It supports RequireJS/AMD, which the other does not as of this writing.
 
 ## Node.js Usage
 
@@ -47,12 +44,20 @@ console.log(merged);
 // -> { x: { y: 2, z: 3 } }
 ```
 
+## RequireJS/AMD usage
+
+```js
+require(['./murge'], function(murge){
+  murge(obj1, obj2)
+})
+```
+
 ## Browser Usage
 
 ```html
 <script src="path/to/murge.js"></script>
 <script>
-  window.merge(ob1, ob2);
+  window.murge(ob1, ob2)
 </script>
 ```
 

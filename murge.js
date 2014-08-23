@@ -4,7 +4,7 @@
  * License MIT
  */
 
-;(function(isCJS){
+;(function(isCJS, isAMD){
 
 	function murge(){
 
@@ -67,7 +67,13 @@
 
 	if (isCJS){
 		module.exports = murge;
-	} else {
+	}
+	if (isAMD){
+		define([], function(){
+			return murge;
+		})
+	}
+	if (!isCJS && !isAMD){
 		window.murge = murge;
 	}
 
@@ -75,5 +81,7 @@
 	typeof module === 'object' &&
 	module &&
 	typeof module.exports === 'object' &&
-	module.exports
+	module.exports,
+	typeof define === 'function' &&
+	window.define.amd
 );
