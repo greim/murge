@@ -9,6 +9,9 @@ This one contains changes that would likely break the massive number
 of dependencies (~20k) on yeikos's, namely that this one only merges *owned*
 properties, ignoring prototype properties.
 
+There are also some performance improvements (http://jsperf.com/merge-test)
+which have been [submitted](https://github.com/yeikos/js.merge/pull/11) to the original module as well.
+
 Original npm `merge` module: https://www.npmjs.org/package/merge
 
 ## Node.js Usage
