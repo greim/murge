@@ -5,7 +5,7 @@ Similar to `_.extend` or `jQuery.extend` but more flexible. Works in Node.js
 and the browser.
 
 Credit goes to [yeikos](https://github.com/yeikos) for creating this module
-([github](https://github.com/yeikos/js.merge), [npm](https://www.npmjs.org/package/murge)).
+([github](https://github.com/yeikos/js.merge), [npm](https://www.npmjs.org/package/merge)).
 This one contains changes that would likely break the massive number
 of dependencies (~20k) on yeikos's, namely that this one only merges *owned*
 properties, ignoring prototype properties.
